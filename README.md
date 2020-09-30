@@ -14,7 +14,7 @@ In case you also want to check FFJORD you need to install
 Dont forget to set the parameters of the used optimisers to the values, presented in the tables below.
 (GAN, FFJORD, Void and LTS models).
 
-You can find the exact commands to run experiments in the file: FILE. 
+You can find the exact commands to run experiments in the file: [run_commands.txt](run_commands.txt). 
 
 
 #### GAN surrogate parameters
