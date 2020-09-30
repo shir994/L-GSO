@@ -1,0 +1,14 @@
+.ipynb_checkpoints
+*.csv
+*.pyc
+*.pdf
+*.tar
+*.svg
+*.out
+*.pkl
+*.pcl
+*.pyc
+*.DS_Store
+local_train/tmp
+.idea
+__pycache__

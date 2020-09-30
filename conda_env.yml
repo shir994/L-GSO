@@ -1,0 +1,25 @@
+name: lgso
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.7.3 
+  - pytorch 
+  - numpy 
+  - scipy 
+  - jupyter 
+  - pandas 
+  - matplotlib 
+  - tqdm 
+  - seaborn 
+  - scikit-learn
+  - pip:
+    - comet-ml 
+    - pyro-ppl 
+    - click 
+    - pyDOE 
+    - lhsmdu 
+    - pytorch-swats 
+    - sobol_seq
+    - gpytorch
+    - botorch
