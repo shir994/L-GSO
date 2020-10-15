@@ -1,3 +1,5 @@
+<img src="LGSO_example.gif" alt="drawing" width="600"/>
+
 # Black-Box Optimization with Local Generative Surrogates
 This repository is an official implementation of the paper: Black-Box Optimization with Local Generative Surrogates, ArXiv: https://arxiv.org/abs/2002.04632.
 
