@@ -8,7 +8,8 @@ sys.path.append('../')
 sys.path.append('../..')
 from typing import List, Union
 from model import YModel, RosenbrockModel, MultimodalSingularityModel, GaussianMixtureHumpModel, \
-                  LearningToSimGaussianModel, BernoulliModel, RosenbrockModelDegenerate
+                  LearningToSimGaussianModel, BernoulliModel, RosenbrockModelDegenerate, BostonNNTuning, \
+                  GaussianMixtureHumpModelDeepDegenerate
 from optimizer import *
 from lts_model import LearnToSimModel
 from logger import SimpleLogger, CometLogger, GANLogger
@@ -102,7 +103,7 @@ def end_to_end_training(epochs: int,
         print(current_psi, status)
         try:
             # logging optimization, i.e. statistics of psi
-            # logger.log_grads(model, y_sampler, current_psi, n_samples_per_dim)
+            logger.log_grads(model, y_sampler, current_psi, n_samples_per_dim, log_grad_diff=True)
             logger.log_performance(y_sampler=y_sampler,
                                    current_psi=current_psi,
                                    n_samples=n_samples)
@@ -186,6 +187,10 @@ def main(model,
     experiment.log_parameters(
         {"optimizer_{}".format(key): value for key, value in optimizer_config.get('line_search_options', {}).items()}
     )
+    # experiment.log_asset("./gan_model.py", overwrite=True)
+    # experiment.log_asset("./optim.py", overwrite=True)
+    # experiment.log_asset("./train.py", overwrite=True)
+    # experiment.log_asset("../model.py", overwrite=True)
 
     logger = str_to_class(logger)(experiment)
 
